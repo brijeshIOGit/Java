@@ -10,8 +10,9 @@ repositories {
 }
 
 dependencies {
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
-
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
@@ -19,6 +20,7 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
 tasks.withType<Jar> {
     manifest {
         attributes["Main-Class"] = "com.scaler.Main"
